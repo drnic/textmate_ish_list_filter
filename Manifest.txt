@@ -4,11 +4,14 @@ PostInstall.txt
 README.rdoc
 Rakefile
 features/development.feature
+features/filter_list.feature
 features/step_definitions/common_steps.rb
+features/step_definitions/filter_list_steps.rb
 features/support/common.rb
 features/support/env.rb
 features/support/matchers.rb
 lib/textmate_ish_list_filter.rb
+lib/textmate_ish_list_filter/filter_list.rb
 script/console
 script/destroy
 script/generate
