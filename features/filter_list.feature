@@ -10,7 +10,7 @@ Feature: Filter a list of alphanumerics where the query's characters appear anyw
       app/controllers/blog_controller.rb
       test/functionals/blog_controller_test.rb
       """
-    When I filter with query "blog"
+    When I filter with query "blogco"
     Then I should receive
       """
       app/controllers/blog_controller.rb

@@ -7,7 +7,15 @@ module TextmateIshListFilter
     end
     
     def query(query)
-      @terms.select { |term| term.index(query) }
+      exact_match = @terms.select { |term| term.index(query) }
+      
+      somewhere_match = @terms.select { |term| term =~ somewhere_regexp(query) }
+      [exact_match, somewhere_match].flatten.uniq
+    end
+    
+    def somewhere_regexp(query)
+      split_query = query.split("").join('.*')
+      %r{#{split_query}}
     end
   end
 end
