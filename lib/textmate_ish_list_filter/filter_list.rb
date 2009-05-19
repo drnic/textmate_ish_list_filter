@@ -14,8 +14,8 @@ module TextmateIshListFilter
     end
     
     def somewhere_regexp(query)
-      split_query = query.split("").join('.*')
-      %r{#{split_query}}
+      split_query = query.to_s.split("").join('.*')
+      /#{split_query}/i
     end
   end
 end
